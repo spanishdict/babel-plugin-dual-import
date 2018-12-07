@@ -57,7 +57,8 @@ module.exports = function(chunkName) {
         'Time on page:',
         e.timeStamp,
         'ms.',
-        linkTimedOut ? 'Timed out.' : ''
+        linkTimedOut ? 'Timed out.' : '',
+        '__CSS_CHUNKS__: ' + JSON.stringify(window.__CSS_CHUNKS__)
       ].join(' ')
       reject(new Error(message))
     }
